@@ -15,6 +15,21 @@ omarchy theme install https://github.com/gaius-codius/omarchy-batroun-noir-theme
 
 Then pick it from the theme menu, or `omarchy theme set "Batroun Noir"`.
 
+## Ghostty
+
+[`ghostty.conf`](ghostty.conf) comes from the Levantine Sunset generator, with
+readable bright black, an accent-coloured cursor, bright bold colours, and
+selection text in the theme's foreground colour.
+
+For standalone Ghostty, save it as `~/.config/ghostty/themes/batroun-noir` and
+set `theme = batroun-noir` in your Ghostty config.
+
+Current Omarchy versions strip terminal configs from downloaded theme repos.
+To keep these colours on Omarchy, copy `ghostty.conf` into the local theme
+override at `~/.config/omarchy/themes/batroun-noir/ghostty.conf` (without a `.git`
+directory), then reapply the theme. Locally authored theme overrides retain
+terminal configs.
+
 ## Palette
 
 | key | |
@@ -119,8 +134,9 @@ restart an app to see a change (`nautilus -q`, then reopen). The template is in 
 
 ## What's in here
 
-Colour and images only — nothing that runs code, so nothing is stripped on install.
-Omarchy regenerates the twenty app configs from `colors.toml` on your machine.
+Colours, images, and a colour-only Ghostty config. Omarchy generates the other
+app configs from `colors.toml`. See the Ghostty section above for the local
+override needed on versions that strip downloaded terminal configs.
 
 ## Licence
 
